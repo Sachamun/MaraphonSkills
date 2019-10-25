@@ -21,11 +21,17 @@ namespace g463_zaharov_demo
            
         }
 
+        private void Register_as_a_runner_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form main = Application.OpenForms[0];
+            main.Show();
+        }
+
         private void btn_new_runner_Click(object sender, EventArgs e)
         {
             Register_as_a_runner_2 open = new Register_as_a_runner_2();
-            open.Show();
             this.Close();
+            open.Show();
         }
 
         private void btn_back_Click(object sender, EventArgs e)
@@ -39,12 +45,6 @@ namespace g463_zaharov_demo
         {
             TimeSpan delta = Program.start - DateTime.Now;
             label17.Text = delta.Days.ToString() + " дней " + delta.Hours.ToString() + " часов " + delta.Minutes.ToString() + " минут до старта марафона!";
-        }
-
-        private void Register_as_a_runner_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Form main = Application.OpenForms[0];
-            main.Show();
         }
     }
 }

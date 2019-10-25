@@ -148,6 +148,7 @@ namespace g463_zaharov_demo
             else
             {
                 Register_for_an_event open = new Register_for_an_event();
+                this.Close();
                 open.Show();
             }
         }

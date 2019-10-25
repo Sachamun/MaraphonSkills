@@ -47,10 +47,10 @@
             this.rb_var_c = new System.Windows.Forms.RadioButton();
             this.txt_sum = new System.Windows.Forms.TextBox();
             this.cb_contribution = new System.Windows.Forms.ComboBox();
-            this.charityBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.g463_zaharov_demoDataSet = new g463_zaharov_demo.g463_zaharov_demoDataSet();
             this.charityBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.g463_zaharov_demoDataSet1 = new g463_zaharov_demo.g463_zaharov_demoDataSet();
+            this.charityBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.g463_zaharov_demoDataSet = new g463_zaharov_demo.g463_zaharov_demoDataSet();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -61,10 +61,10 @@
             this.charityBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.charityBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.g463_zaharov_demoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.charityBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.g463_zaharov_demoDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.charityBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.g463_zaharov_demoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.charityBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +99,7 @@
             this.btn_back.TabIndex = 6;
             this.btn_back.Text = "Назад";
             this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // panel1
             // 
@@ -215,6 +216,7 @@
             // 
             // rb_var_a
             // 
+            this.rb_var_a.Checked = true;
             this.rb_var_a.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rb_var_a.Location = new System.Drawing.Point(479, 294);
             this.rb_var_a.Name = "rb_var_a";
@@ -257,7 +259,7 @@
             this.txt_sum.Name = "txt_sum";
             this.txt_sum.Size = new System.Drawing.Size(220, 30);
             this.txt_sum.TabIndex = 49;
-            this.txt_sum.Text = "$500";
+            this.txt_sum.Text = "500";
             // 
             // cb_contribution
             // 
@@ -271,16 +273,6 @@
             this.cb_contribution.TabIndex = 50;
             this.cb_contribution.ValueMember = "CharityId";
             // 
-            // charityBindingSource
-            // 
-            this.charityBindingSource.DataMember = "Charity";
-            this.charityBindingSource.DataSource = this.g463_zaharov_demoDataSet;
-            // 
-            // g463_zaharov_demoDataSet
-            // 
-            this.g463_zaharov_demoDataSet.DataSetName = "g463_zaharov_demoDataSet";
-            this.g463_zaharov_demoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // charityBindingSource2
             // 
             this.charityBindingSource2.DataMember = "Charity";
@@ -290,6 +282,16 @@
             // 
             this.g463_zaharov_demoDataSet1.DataSetName = "g463_zaharov_demoDataSet";
             this.g463_zaharov_demoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // charityBindingSource
+            // 
+            this.charityBindingSource.DataMember = "Charity";
+            this.charityBindingSource.DataSource = this.g463_zaharov_demoDataSet;
+            // 
+            // g463_zaharov_demoDataSet
+            // 
+            this.g463_zaharov_demoDataSet.DataSetName = "g463_zaharov_demoDataSet";
+            this.g463_zaharov_demoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label8
             // 
@@ -357,6 +359,7 @@
             this.btn_cancel.TabIndex = 55;
             this.btn_cancel.Text = "Отмена";
             this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // charityTableAdapter
             // 
@@ -404,10 +407,10 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.charityBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.g463_zaharov_demoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.charityBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.g463_zaharov_demoDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.charityBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.g463_zaharov_demoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.charityBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

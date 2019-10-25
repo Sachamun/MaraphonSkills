@@ -43,6 +43,10 @@ namespace g463_zaharov_demo
                 {
                     MessageBox.Show("Сумма взноса должна быть действительным положительным числом");
                 }
+
+                Registration_confirmation open = new Registration_confirmation();
+                this.Close();
+                open.Show();
             }
             else
             {
@@ -62,6 +66,16 @@ namespace g463_zaharov_demo
         {
             summerise();
             label10.Text = "$" + sum.ToString();    
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

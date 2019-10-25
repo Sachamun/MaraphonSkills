@@ -101,6 +101,12 @@
     <Compile Include="Register for an event.Designer.cs">
       <DependentUpon>Register for an event.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registration confirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration confirmation.Designer.cs">
+      <DependentUpon>Registration confirmation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Runner menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register for an event.resx">
       <DependentUpon>Register for an event.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration confirmation.resx">
+      <DependentUpon>Registration confirmation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Runner menu.resx">
       <DependentUpon>Runner menu.cs</DependentUpon>

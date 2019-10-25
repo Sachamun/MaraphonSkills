@@ -58,6 +58,12 @@
     <Compile Include="Coordinator menu.Designer.cs">
       <DependentUpon>Coordinator menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Edit runner profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit runner profile.Designer.cs">
+      <DependentUpon>Edit runner profile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Find out more information .cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Coordinator menu.resx">
       <DependentUpon>Coordinator menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit runner profile.resx">
+      <DependentUpon>Edit runner profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Find out more information .resx">
       <DependentUpon>Find out more information .cs</DependentUpon>

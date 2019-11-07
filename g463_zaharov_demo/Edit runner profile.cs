@@ -21,6 +21,8 @@ namespace g463_zaharov_demo
         DateTime birthday;
         Image image;
 
+        DateTime date_now = DateTime.Now;
+
         void LoadData()
         {
             label14.Text = Login.login;
@@ -142,6 +144,7 @@ namespace g463_zaharov_demo
             string password = txt_password.Text;
             string repeat_password = txt_repeat_password.Text;
             string email = label14.Text;
+            birthday = dtp_birthday.Value;
             gender = cb_gender.SelectedValue.ToString();
             country = cb_country.SelectedValue.ToString();
             
@@ -154,10 +157,14 @@ namespace g463_zaharov_demo
             {
                 MessageBox.Show("Загрузите свою фотографию!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if (date_now.Year - dtp_birthday.Value.Year < 10 || dtp_birthday.Value.Year> date_now.Year)
+            {
+                MessageBox.Show("Дата рождения должна быть правильной и бегуну должно быть не менее 10 лет!", "Дата должна соответствовать следующим требованиям!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else if(password == "Пароль")
             {
                 string query = "update [User] set FirstName = '"+ name +"', LastName = '"+ surname +"', ProfileImage = '"+ file_image +"' where Email = '"+ email +"'";
-                string query2 = "update [Runner] set Gender = '"+ gender +"', CountryCode = '"+ country +"'";
+                string query2 = "update [Runner] set Gender = '"+ gender + "', DateOfBirth = '" + birthday + "', CountryCode = '" + country +"'";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.ExecuteNonQuery();
@@ -176,8 +183,8 @@ namespace g463_zaharov_demo
                 }
                 else
                 {     
-                    string query = "update [User] set FirstName = '" + name + "', LastName = '" + surname + "', ProfileImage = '" + file_image + "', Password = '"+ password +"' where Email = '" + email + "'";
-                    string query2 = "update [Runner] set Gender = '" + gender + "', CountryCode = '" + country + "' where Email = '"+ email +"'";
+                    string query = "update [User] set FirstName = '" + name + "', LastName = '" + surname + "', ProfileImage = '" + file_image + "', Password = '" + password +"' where Email = '" + email + "'";
+                    string query2 = "update [Runner] set Gender = '" + gender + "', DateOfBirth = '" + birthday + "', CountryCode = '" + country + "' where Email = '"+ email +"'";
 
                     SqlCommand command = new SqlCommand(query, connection);
                     command.ExecuteNonQuery();

@@ -27,5 +27,12 @@ namespace g463_zaharov_demo
             Contacts open = new Contacts();
             open.Show();
         }
+
+        private void btn_up_prof_Click(object sender, EventArgs e)
+        {
+            Edit_runner_profile open = new Edit_runner_profile();
+            open.Show();
+            this.Close();
+        }
     }
 }

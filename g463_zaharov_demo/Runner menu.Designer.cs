@@ -38,7 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_up_prof = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btn_contacts = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -142,16 +142,17 @@
             this.button2.Text = "Мои результаты";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_up_prof
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.Color.Gray;
-            this.button3.Location = new System.Drawing.Point(125, 300);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(305, 107);
-            this.button3.TabIndex = 106;
-            this.button3.Text = "Редактирование профиля";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_up_prof.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_up_prof.ForeColor = System.Drawing.Color.Gray;
+            this.btn_up_prof.Location = new System.Drawing.Point(125, 300);
+            this.btn_up_prof.Name = "btn_up_prof";
+            this.btn_up_prof.Size = new System.Drawing.Size(305, 107);
+            this.btn_up_prof.TabIndex = 106;
+            this.btn_up_prof.Text = "Редактирование профиля";
+            this.btn_up_prof.UseVisualStyleBackColor = true;
+            this.btn_up_prof.Click += new System.EventHandler(this.btn_up_prof_Click);
             // 
             // button4
             // 
@@ -188,7 +189,7 @@
             this.ClientSize = new System.Drawing.Size(925, 636);
             this.Controls.Add(this.btn_contacts);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btn_up_prof);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
@@ -218,10 +219,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btn_contacts;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btn_up_prof;
     }
 }

@@ -48,9 +48,11 @@ namespace g463_zaharov_demo
             }
         }
 
+        public static string login;
+
         private void btn_login_Click(object sender, EventArgs e)
         {
-            string login = txt_login.Text;
+            login  = txt_login.Text;
             string password = txt_password.Text;
 
             string query = "select RoleId from [User] where [Email] = '" + login + "'";

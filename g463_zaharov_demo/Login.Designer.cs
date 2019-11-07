@@ -238,10 +238,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txt_login;
         private System.Windows.Forms.TextBox txt_password;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Timer timer1;
+        public System.Windows.Forms.TextBox txt_login;
     }
 }

@@ -56,9 +56,7 @@ namespace g463_zaharov_demo
 
         private void Register_for_an_event_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'g463_zaharov_demoDataSet1.Charity' table. You can move, or remove it, as needed.
-            this.charityTableAdapter.Fill(this.g463_zaharov_demoDataSet1.Charity);
-            // TODO: This line of code loads data into the 'g463_zaharov_demoDataSet.Charity' table. You can move, or remove it, as needed.
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "g463_zaharov_demoDataSet.Charity". При необходимости она может быть перемещена или удалена.
             this.charityTableAdapter.Fill(this.g463_zaharov_demoDataSet.Charity);
         }
 

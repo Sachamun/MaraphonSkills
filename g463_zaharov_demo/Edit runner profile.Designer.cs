@@ -40,10 +40,15 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cb_gender = new System.Windows.Forms.ComboBox();
+            this.genderBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.g463zaharovdemoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.g463_zaharov_demoDataSet = new g463_zaharov_demo.g463_zaharov_demoDataSet();
+            this.genderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label9 = new System.Windows.Forms.Label();
             this.dtp_birthday = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.cb_country = new System.Windows.Forms.ComboBox();
+            this.countryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label12 = new System.Windows.Forms.Label();
             this.profile_image = new System.Windows.Forms.PictureBox();
             this.btn_view = new System.Windows.Forms.Button();
@@ -60,9 +65,20 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label14 = new System.Windows.Forms.Label();
+            this.genderTableAdapter = new g463_zaharov_demo.g463_zaharov_demoDataSetTableAdapters.GenderTableAdapter();
+            this.countryTableAdapter = new g463_zaharov_demo.g463_zaharov_demoDataSetTableAdapters.CountryTableAdapter();
+            this.label15 = new System.Windows.Forms.Label();
+            this.g463_zaharov_demoDataSet1 = new g463_zaharov_demo.g463_zaharov_demoDataSet();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.g463zaharovdemoDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.g463_zaharov_demoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profile_image)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.g463_zaharov_demoDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -97,6 +113,7 @@
             this.btn_back.TabIndex = 13;
             this.btn_back.Text = "Назад";
             this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // label1
             // 
@@ -140,6 +157,8 @@
             this.txt_surname.Size = new System.Drawing.Size(263, 30);
             this.txt_surname.TabIndex = 110;
             this.txt_surname.Text = "Фамилия";
+            this.txt_surname.Enter += new System.EventHandler(this.txt_name_Enter);
+            this.txt_surname.Leave += new System.EventHandler(this.txt_name_Leave);
             // 
             // txt_name
             // 
@@ -150,6 +169,8 @@
             this.txt_name.Size = new System.Drawing.Size(263, 30);
             this.txt_name.TabIndex = 109;
             this.txt_name.Text = "Имя";
+            this.txt_name.Enter += new System.EventHandler(this.txt_name_Enter);
+            this.txt_name.Leave += new System.EventHandler(this.txt_name_Leave);
             // 
             // label8
             // 
@@ -175,6 +196,7 @@
             // 
             // cb_gender
             // 
+            this.cb_gender.DataSource = this.genderBindingSource;
             this.cb_gender.DisplayMember = "Gender";
             this.cb_gender.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cb_gender.FormattingEnabled = true;
@@ -182,6 +204,27 @@
             this.cb_gender.Name = "cb_gender";
             this.cb_gender.Size = new System.Drawing.Size(137, 30);
             this.cb_gender.TabIndex = 112;
+            this.cb_gender.ValueMember = "Gender";
+            // 
+            // genderBindingSource1
+            // 
+            this.genderBindingSource1.DataMember = "Gender";
+            this.genderBindingSource1.DataSource = this.g463zaharovdemoDataSetBindingSource;
+            // 
+            // g463zaharovdemoDataSetBindingSource
+            // 
+            this.g463zaharovdemoDataSetBindingSource.DataSource = this.g463_zaharov_demoDataSet;
+            this.g463zaharovdemoDataSetBindingSource.Position = 0;
+            // 
+            // g463_zaharov_demoDataSet
+            // 
+            this.g463_zaharov_demoDataSet.DataSetName = "g463_zaharov_demoDataSet";
+            this.g463_zaharov_demoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // genderBindingSource
+            // 
+            this.genderBindingSource.DataMember = "Gender";
+            this.genderBindingSource.DataSource = this.g463_zaharov_demoDataSet;
             // 
             // label9
             // 
@@ -215,6 +258,7 @@
             // 
             // cb_country
             // 
+            this.cb_country.DataSource = this.countryBindingSource;
             this.cb_country.DisplayMember = "CountryName";
             this.cb_country.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cb_country.FormattingEnabled = true;
@@ -223,6 +267,11 @@
             this.cb_country.Size = new System.Drawing.Size(197, 30);
             this.cb_country.TabIndex = 116;
             this.cb_country.ValueMember = "CountryCode";
+            // 
+            // countryBindingSource
+            // 
+            this.countryBindingSource.DataMember = "Country";
+            this.countryBindingSource.DataSource = this.g463zaharovdemoDataSetBindingSource;
             // 
             // label12
             // 
@@ -254,6 +303,7 @@
             this.btn_view.TabIndex = 119;
             this.btn_view.Text = "Просмотр";
             this.btn_view.UseVisualStyleBackColor = true;
+            this.btn_view.Click += new System.EventHandler(this.btn_view_Click);
             // 
             // txt_file_image
             // 
@@ -306,6 +356,8 @@
             this.txt_repeat_password.Size = new System.Drawing.Size(263, 30);
             this.txt_repeat_password.TabIndex = 126;
             this.txt_repeat_password.Text = "Повторите пароль";
+            this.txt_repeat_password.Enter += new System.EventHandler(this.txt_name_Enter);
+            this.txt_repeat_password.Leave += new System.EventHandler(this.txt_name_Leave);
             // 
             // label5
             // 
@@ -327,6 +379,8 @@
             this.txt_password.Size = new System.Drawing.Size(263, 30);
             this.txt_password.TabIndex = 124;
             this.txt_password.Text = "Пароль";
+            this.txt_password.Enter += new System.EventHandler(this.txt_name_Enter);
+            this.txt_password.Leave += new System.EventHandler(this.txt_name_Leave);
             // 
             // label13
             // 
@@ -349,6 +403,7 @@
             this.btn_save.TabIndex = 106;
             this.btn_save.Text = "Сохранить";
             this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // btn_cancel
             // 
@@ -387,11 +442,46 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label14.Location = new System.Drawing.Point(220, 159);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(413, 26);
+            this.label14.TabIndex = 129;
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // genderTableAdapter
+            // 
+            this.genderTableAdapter.ClearBeforeFill = true;
+            // 
+            // countryTableAdapter
+            // 
+            this.countryTableAdapter.ClearBeforeFill = true;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label15.Location = new System.Drawing.Point(25, 400);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(413, 26);
+            this.label15.TabIndex = 130;
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // g463_zaharov_demoDataSet1
+            // 
+            this.g463_zaharov_demoDataSet1.DataSetName = "g463_zaharov_demoDataSet";
+            this.g463_zaharov_demoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Edit_runner_profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(925, 580);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_cancel);
             this.Controls.Add(this.btn_save);
@@ -420,11 +510,18 @@
             this.Controls.Add(this.panel2);
             this.Name = "Edit_runner_profile";
             this.Text = "Maraphon Skills 2017 - Edit runner profile";
+            this.Load += new System.EventHandler(this.Edit_runner_profile_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.g463zaharovdemoDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.g463_zaharov_demoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profile_image)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.g463_zaharov_demoDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -463,5 +560,15 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label14;
+        private g463_zaharov_demoDataSet g463_zaharov_demoDataSet;
+        private System.Windows.Forms.BindingSource genderBindingSource;
+        private g463_zaharov_demoDataSetTableAdapters.GenderTableAdapter genderTableAdapter;
+        private System.Windows.Forms.BindingSource g463zaharovdemoDataSetBindingSource;
+        private System.Windows.Forms.BindingSource countryBindingSource;
+        private g463_zaharov_demoDataSetTableAdapters.CountryTableAdapter countryTableAdapter;
+        private System.Windows.Forms.BindingSource genderBindingSource1;
+        private System.Windows.Forms.Label label15;
+        private g463_zaharov_demoDataSet g463_zaharov_demoDataSet1;
     }
 }

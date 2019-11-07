@@ -54,6 +54,13 @@ namespace g463_zaharov_demo
             cb_gender.SelectedValue = gender;
             cb_country.SelectedValue = country;
             txt_file_image.Text = prof_img.ToString();
+
+            if(prof_img != "")
+            {
+                profile_image.BackgroundImage = Image.FromFile("C:\\Users\\Евгений\\Documents\\Конспекты\\4 курс\\Демо экзамен\\Image\\" + txt_file_image.Text);
+            }
+
+            reader.Close();
         }
 
         public Edit_runner_profile()
@@ -134,6 +141,10 @@ namespace g463_zaharov_demo
             string file_image = txt_file_image.Text;
             string password = txt_password.Text;
             string repeat_password = txt_repeat_password.Text;
+            string email = label14.Text;
+            gender = cb_gender.SelectedValue.ToString();
+            country = cb_country.SelectedValue.ToString();
+            
 
             if (name == "Имя" || surname == "Фамилия")
             {
@@ -143,9 +154,36 @@ namespace g463_zaharov_demo
             {
                 MessageBox.Show("Загрузите свою фотографию!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (check_password(password) == false)
+            else if(password == "Пароль")
             {
-                MessageBox.Show("Пароль должен отвечать следующим требованиям: минимум 6 символов, минимум 1 прописная буква, минимум 1 цифра, по крайней мере один из следующих символов !@#$%^", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string query = "update [User] set FirstName = '"+ name +"', LastName = '"+ surname +"', ProfileImage = '"+ file_image +"' where Email = '"+ email +"'";
+                string query2 = "update [Runner] set Gender = '"+ gender +"', CountryCode = '"+ country +"'";
+
+                SqlCommand command = new SqlCommand(query, connection);
+                command.ExecuteNonQuery();
+                SqlCommand command2 = new SqlCommand(query2, connection);
+                command2.ExecuteNonQuery();
+            }
+            else if(password != "Пароль")
+            {
+                if (check_password(password) == false)
+                {
+                    MessageBox.Show("Пароль должен отвечать следующим требованиям: минимум 6 символов, минимум 1 прописная буква, минимум 1 цифра, по крайней мере один из следующих символов !@#$%^", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (repeat_password != password)
+                {
+                    MessageBox.Show("Пароли не совпадают!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {     
+                    string query = "update [User] set FirstName = '" + name + "', LastName = '" + surname + "', ProfileImage = '" + file_image + "', Password = '"+ password +"' where Email = '" + email + "'";
+                    string query2 = "update [Runner] set Gender = '" + gender + "', CountryCode = '" + country + "' where Email = '"+ email +"'";
+
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.ExecuteNonQuery();
+                    SqlCommand command2 = new SqlCommand(query2, connection);
+                    command2.ExecuteNonQuery();
+                }
             }
         }
 

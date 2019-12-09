@@ -45,5 +45,11 @@ namespace g463_zaharov_demo
             open.Show();
             this.Hide();
         }
+
+        private void btn_more_information_Click(object sender, EventArgs e)
+        {
+            Find_out_more_information open = new Find_out_more_information();
+            open.Show();
+        }
     }
 }

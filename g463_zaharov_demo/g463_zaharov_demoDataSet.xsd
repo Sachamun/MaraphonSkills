@@ -155,7 +155,7 @@ SELECT CharityId, CharityName, CharityDescription, CharityLogo FROM Charity WHER
   <xs:element name="g463_zaharov_demoDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="g463_zaharov_demoDataSet" msprop:Generator_UserDSName="g463_zaharov_demoDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Display" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDisplay" msprop:Generator_ColumnPropNameInRow="Display" msprop:Generator_ColumnPropNameInTable="DisplayColumn" msprop:Generator_UserColumnName="Display" minOccurs="0">
@@ -176,7 +176,7 @@ SELECT CharityId, CharityName, CharityDescription, CharityLogo FROM Charity WHER
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Country" msprop:Generator_TableClassName="CountryDataTable" msprop:Generator_TableVarName="tableCountry" msprop:Generator_RowChangedName="CountryRowChanged" msprop:Generator_TablePropName="Country" msprop:Generator_RowDeletingName="CountryRowDeleting" msprop:Generator_RowChangingName="CountryRowChanging" msprop:Generator_RowEvHandlerName="CountryRowChangeEventHandler" msprop:Generator_RowDeletedName="CountryRowDeleted" msprop:Generator_RowClassName="CountryRow" msprop:Generator_UserTableName="Country" msprop:Generator_RowEvArgName="CountryRowChangeEvent">
+        <xs:element name="Country" msprop:Generator_TableClassName="CountryDataTable" msprop:Generator_TableVarName="tableCountry" msprop:Generator_TablePropName="Country" msprop:Generator_RowDeletingName="CountryRowDeleting" msprop:Generator_RowChangingName="CountryRowChanging" msprop:Generator_RowEvHandlerName="CountryRowChangeEventHandler" msprop:Generator_RowDeletedName="CountryRowDeleted" msprop:Generator_UserTableName="Country" msprop:Generator_RowChangedName="CountryRowChanged" msprop:Generator_RowEvArgName="CountryRowChangeEvent" msprop:Generator_RowClassName="CountryRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CountryName" msprop:Generator_ColumnVarNameInTable="columnCountryName" msprop:Generator_ColumnPropNameInRow="CountryName" msprop:Generator_ColumnPropNameInTable="CountryNameColumn" msprop:Generator_UserColumnName="CountryName">
@@ -196,7 +196,7 @@ SELECT CharityId, CharityName, CharityDescription, CharityLogo FROM Charity WHER
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Gender" msprop:Generator_TableClassName="GenderDataTable" msprop:Generator_TableVarName="tableGender" msprop:Generator_TablePropName="Gender" msprop:Generator_RowDeletingName="GenderRowDeleting" msprop:Generator_RowChangingName="GenderRowChanging" msprop:Generator_RowEvHandlerName="GenderRowChangeEventHandler" msprop:Generator_RowDeletedName="GenderRowDeleted" msprop:Generator_UserTableName="Gender" msprop:Generator_RowChangedName="GenderRowChanged" msprop:Generator_RowEvArgName="GenderRowChangeEvent" msprop:Generator_RowClassName="GenderRow">
+        <xs:element name="Gender" msprop:Generator_TableClassName="GenderDataTable" msprop:Generator_TableVarName="tableGender" msprop:Generator_RowChangedName="GenderRowChanged" msprop:Generator_TablePropName="Gender" msprop:Generator_RowDeletingName="GenderRowDeleting" msprop:Generator_RowChangingName="GenderRowChanging" msprop:Generator_RowEvHandlerName="GenderRowChangeEventHandler" msprop:Generator_RowDeletedName="GenderRowDeleted" msprop:Generator_RowClassName="GenderRow" msprop:Generator_UserTableName="Gender" msprop:Generator_RowEvArgName="GenderRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Gender" msprop:Generator_ColumnVarNameInTable="columnGender" msprop:Generator_ColumnPropNameInRow="Gender" msprop:Generator_ColumnPropNameInTable="GenderColumn" msprop:Generator_UserColumnName="Gender">
@@ -209,7 +209,7 @@ SELECT CharityId, CharityName, CharityDescription, CharityLogo FROM Charity WHER
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Charity" msprop:Generator_TableClassName="CharityDataTable" msprop:Generator_TableVarName="tableCharity" msprop:Generator_RowChangedName="CharityRowChanged" msprop:Generator_TablePropName="Charity" msprop:Generator_RowDeletingName="CharityRowDeleting" msprop:Generator_RowChangingName="CharityRowChanging" msprop:Generator_RowEvHandlerName="CharityRowChangeEventHandler" msprop:Generator_RowDeletedName="CharityRowDeleted" msprop:Generator_RowClassName="CharityRow" msprop:Generator_UserTableName="Charity" msprop:Generator_RowEvArgName="CharityRowChangeEvent">
+        <xs:element name="Charity" msprop:Generator_TableClassName="CharityDataTable" msprop:Generator_TableVarName="tableCharity" msprop:Generator_TablePropName="Charity" msprop:Generator_RowDeletingName="CharityRowDeleting" msprop:Generator_RowChangingName="CharityRowChanging" msprop:Generator_RowEvHandlerName="CharityRowChangeEventHandler" msprop:Generator_RowDeletedName="CharityRowDeleted" msprop:Generator_UserTableName="Charity" msprop:Generator_RowChangedName="CharityRowChanged" msprop:Generator_RowEvArgName="CharityRowChangeEvent" msprop:Generator_RowClassName="CharityRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CharityId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCharityId" msprop:Generator_ColumnPropNameInRow="CharityId" msprop:Generator_ColumnPropNameInTable="CharityIdColumn" msprop:Generator_UserColumnName="CharityId" type="xs:int" />

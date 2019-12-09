@@ -196,7 +196,8 @@ namespace g463_zaharov_demo
 
         private void btn_back_Click(object sender, EventArgs e)
         {
-
+            Main open = new Main();
+            open.Show();
         }
 
         private void btn_view_Click(object sender, EventArgs e)

@@ -102,5 +102,10 @@ namespace g463_zaharov_demo
         {
             connection.Close();
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

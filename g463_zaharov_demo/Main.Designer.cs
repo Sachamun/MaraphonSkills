@@ -35,7 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_registration_runner = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_more_information = new System.Windows.Forms.Button();
             this.btn_sponsor = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -112,16 +112,17 @@
             this.button2.Text = "Я хочу стать зрителем";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_more_information
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.Color.Gray;
-            this.button3.Location = new System.Drawing.Point(425, 290);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(406, 125);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Я хочу узнать больше о событии";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_more_information.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_more_information.ForeColor = System.Drawing.Color.Gray;
+            this.btn_more_information.Location = new System.Drawing.Point(425, 290);
+            this.btn_more_information.Name = "btn_more_information";
+            this.btn_more_information.Size = new System.Drawing.Size(406, 125);
+            this.btn_more_information.TabIndex = 3;
+            this.btn_more_information.Text = "Я хочу узнать больше о событии";
+            this.btn_more_information.UseVisualStyleBackColor = true;
+            this.btn_more_information.Click += new System.EventHandler(this.btn_more_information_Click);
             // 
             // btn_sponsor
             // 
@@ -178,7 +179,7 @@
             this.ClientSize = new System.Drawing.Size(841, 534);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btn_more_information);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_registration_runner);
             this.Controls.Add(this.panel1);
@@ -205,7 +206,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_registration_runner;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_more_information;
         private System.Windows.Forms.Button btn_sponsor;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_login;

@@ -78,6 +78,7 @@
             this.btn_back.TabIndex = 6;
             this.btn_back.Text = "Назад";
             this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // btn_login
             // 

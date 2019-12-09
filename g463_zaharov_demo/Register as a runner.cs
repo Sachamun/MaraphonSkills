@@ -18,7 +18,9 @@ namespace g463_zaharov_demo
 
         private void btn_old_runner_Click(object sender, EventArgs e)
         {
-           
+            Login open = new Login();
+            open.Show();
+            this.Close();
         }
 
         private void Register_as_a_runner_FormClosed(object sender, FormClosedEventArgs e)

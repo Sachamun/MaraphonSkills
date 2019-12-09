@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About Maraphon Skills 2017.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About Maraphon Skills 2017.Designer.cs">
+      <DependentUpon>About Maraphon Skills 2017.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contacts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>g463_zaharov_demoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="How long is a maraphon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="How long is a maraphon.Designer.cs">
+      <DependentUpon>How long is a maraphon.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -134,6 +146,9 @@
     <Compile Include="Sponsorship confirmation.Designer.cs">
       <DependentUpon>Sponsorship confirmation.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="About Maraphon Skills 2017.resx">
+      <DependentUpon>About Maraphon Skills 2017.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Contacts.resx">
       <DependentUpon>Contacts.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Find out more information .resx">
       <DependentUpon>Find out more information .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="How long is a maraphon.resx">
+      <DependentUpon>How long is a maraphon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
